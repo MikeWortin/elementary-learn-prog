@@ -17,15 +17,15 @@ int main(string[] args) {
 	Gtk.init(ref args);
 	
 	var window = new Gtk.Window();
-	window.title = "Hello GTK";
+	window.title = _("Hello GTK");
 	window.set_border_width(12);
 	window.set_position(Gtk.WindowPosition.CENTER);
 	window.set_default_size(350, 70);
 	window.destroy.connect(Gtk.main_quit);
 	
-	var button_hello = new Gtk.Button.with_label("Click me!");
+	var button_hello = new Gtk.Button.with_label(_("Click me!"));
 	button_hello.clicked.connect(() => {
-		button_hello.label = "Hello World!";
+		button_hello.label = _("Hello World!");
 		button_hello.set_sensitive(false);
 	});
 	
